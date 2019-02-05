@@ -9,3 +9,5 @@
 #Searches the ncbi nucleotide database for records with txid6265, which corresponds to Toxocara canis
 #Then pipes to efetch, which grabs the found sequences and writes to a file called output.fasta
 esearch -db nucleotide -query "txid6265"| efetch -format fasta > output.fasta
+
+#Feb 5 2019 :)
