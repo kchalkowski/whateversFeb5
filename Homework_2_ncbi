@@ -1,0 +1,11 @@
+#!/bin/sh
+     #
+     #  load the module
+     source /opt/asn/etc/asn-bash-profiles-special/modules.sh
+     module load ncbi-toolkit/21.0.0
+     #
+     #  place commands here
+
+#Searches the ncbi nucleotide database for records with txid6265, which corresponds to Toxocara canis
+#Then pipes to efetch, which grabs the found sequences and writes to a file called output.fasta
+esearch -db nucleotide -query "txid6265"| efetch -format fasta > output.fasta
